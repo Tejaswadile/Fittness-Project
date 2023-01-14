@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <style>body{
+        background-image: url('/static/parag.jpg');
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:100% 100%;
+        
+
+
+
+    }
+    </style>
+</head>
+
+<body text="green">
+    <h1>welcome to Edit page</h1>
+    <h1><a href="/">Home</a></h1>
+    <h1><a href="/login">login</a></h1>
+    <center>
+        <div>
+            <fieldset>
+                <form action="/adddata" method="post">
+                    <table border="1px">
+                        <tr>
+                            <td>Name</td>
+                            <td><input type="text" name="name" value="{{t[0]}}" ></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input type="email" name="email" value="{{t[1]}}"></td>
+                        </tr>
+                        <tr>
+                            <td>password</td>
+                            <td><input type="password" name="password" value="{{t[2]}}"></td>
+                        </tr>
+                        <tr>
+                            <td>ph-no</td>
+                            <td><input type="number" name="phno" value="{{t[3]}}"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="submit"></td>
+                            <td><input type="reset" value="refresh"></td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+        </div>
+    </center>
+
+        
+</body>
+</html>

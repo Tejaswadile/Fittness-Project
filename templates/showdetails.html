@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>showdetails</title>
+
+
+        <style>body{
+            background-image: url('/static/ved.jpg');
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:100% 100%;
+            
+
+
+
+        }
+        </style>
+    </head>
+
+    <body text="green">
+        <h1>WELCOME YOU ARE THE MEMBER OF POWERLIFT FITNESS</h1>
+        <h1>Location : THANE</h1>
+        <h1>Contact : 9923456560</h1>
+        <h1>Time : 24 Hour access gym</h1>
+        <h1>1 THE MEMBERSHIP GYM,<br>
+        2 PERSONAL TRAINING,<br>
+        3 THE GROUP TRAINING,<br>
+        4 CROSSFIT<br>
+        </h1>
+        
+        <table border="1px">
+            <thead>
+                <td>name</td>
+                <td>email</td>
+                <td>password</td>
+                <td>phno</td>
+            </thead>
+        {% for i in elist %}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td><a href="/edit?name={{i[0]}}&email={{i[1]}}&password={{i[2]}}&phno={{i[3]}}">edit</a></td>
+            <td><a href="/del?email={{i[1]}}">delete</a></td>
+        </tr>
+        {% endfor %}
+        
+        </table>
+        
+    </body>
+</html>
